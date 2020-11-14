@@ -8,6 +8,8 @@
 ///
 ///	Remarks	 :	none
 ///
+#macro phy_debug_render_all phy_debug_render_aabb|phy_debug_render_collision_pairs|phy_debug_render_coms|phy_debug_render_core_shapes|phy_debug_render_joints|phy_debug_render_obb|phy_debug_render_shapes
+
 function brb_open(argument0) {
 	var file = file_text_open_read(argument0);
 	if (file == -1) {

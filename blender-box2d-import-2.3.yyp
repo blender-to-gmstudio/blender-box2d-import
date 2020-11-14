@@ -1,11 +1,12 @@
 {
   "resources": [
-    {"id":{"name":"brb_open","path":"scripts/brb_open/brb_open.yy",},"order":0,},
-    {"id":{"name":"brb_close","path":"scripts/brb_close/brb_close.yy",},"order":1,},
-    {"id":{"name":"brb_get_body","path":"scripts/brb_get_body/brb_get_body.yy",},"order":2,},
+    {"id":{"name":"brb_open","path":"scripts/brb_open/brb_open.yy",},"order":1,},
+    {"id":{"name":"brb_objects","path":"scripts/brb_objects/brb_objects.yy",},"order":2,},
+    {"id":{"name":"brb_close","path":"scripts/brb_close/brb_close.yy",},"order":0,},
+    {"id":{"name":"brb_get_body","path":"scripts/brb_get_body/brb_get_body.yy",},"order":1,},
     {"id":{"name":"brb_bind_body","path":"scripts/brb_bind_body/brb_bind_body.yy",},"order":3,},
-    {"id":{"name":"brb_delete_body","path":"scripts/brb_delete_body/brb_delete_body.yy",},"order":4,},
-    {"id":{"name":"brb_apply_fix_settings","path":"scripts/brb_apply_fix_settings/brb_apply_fix_settings.yy",},"order":5,},
+    {"id":{"name":"brb_delete_body","path":"scripts/brb_delete_body/brb_delete_body.yy",},"order":0,},
+    {"id":{"name":"brb_apply_fix_settings","path":"scripts/brb_apply_fix_settings/brb_apply_fix_settings.yy",},"order":4,},
     {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},"order":0,},
     {"id":{"name":"room0","path":"rooms/room0/room0.yy",},"order":0,},
   ],
@@ -46,6 +47,9 @@
     {"folderPath":"folders/Extensions.yy","order":13,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sequences.yy","order":1,"resourceVersion":"1.0","name":"Sequences","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Animation Curves.yy","order":2,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/brb/bodies.yy","order":7,"resourceVersion":"1.0","name":"bodies","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/brb/general.yy","order":8,"resourceVersion":"1.0","name":"general","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/brb/joints.yy","order":9,"resourceVersion":"1.0","name":"joints","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
@@ -53,7 +57,10 @@
   "TextureGroups": [
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"physics_rbworld.phy","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"physics_rbworld.blend","resourceType":"GMIncludedFile",},
+  ],
   "MetaData": {
     "IDEVersion": "2.3.0.529",
   },

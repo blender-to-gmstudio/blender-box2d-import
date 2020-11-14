@@ -9,17 +9,16 @@
 /// 
 /// @return {list} A list of fixtures
 ///
-function brb_get_body(argument0, argument1, argument2) {
-
 #macro RIGIDBODY_VERSION	"0.7.2"
 
+function brb_get_body(argument0, argument1, argument2) {
 	var map_object_data = argument0,
 	    density = argument1,
-	    scale = argument2;
+	    scale = is_undefined(argument2) ? 1 : argument2;
 
 	if (ds_map_exists(map_object_data, "physics")) {
 		var map_physics_data = map_object_data[?"physics"];
-		var dimensions = map_object_data[?"dimensions"];
+		var dimensions = map_object_data[?"object"][?"dimensions"];
 		var shape = map_physics_data[?"collision_shape"];
 		var shape = map_physics_data[?"collision_shape"];
 	
@@ -54,12 +53,13 @@ function brb_get_body(argument0, argument1, argument2) {
 				for(var i = 0;i < ds_list_size(lst_coords_data);i++) {
 					var lst_current = lst_coords_data[|i];
 					var fix = physics_fixture_create();
-					physics_fixture_set_chain_shape(fix,true);
+					physics_fixture_set_chain_shape(fix, true);
 					//physics_fixture_set_polygon_shape(fix);		// TESTING
 					brb_apply_fix_settings(fix,map_physics_data, density);
 					ds_list_add(lst_fixtures,fix);
 				
 					for(var j = 0;j < ds_list_size(lst_current);j++) {
+					//for(var j = ds_list_size(lst_current)-1;j > 0;j--) {
 						var lst_coords = lst_current[|j];
 						physics_fixture_add_point(fix,lst_coords[|0] * scale,-lst_coords[|1] * scale);
 					}
@@ -68,11 +68,8 @@ function brb_get_body(argument0, argument1, argument2) {
 			default:
 				break;
 		}
-	
 		return lst_fixtures;
 	} else {
 		return -1;
 	}
-
-
 }

@@ -6,7 +6,7 @@
     "path": "folders/Scripts/brb/bodies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "brb_delete_body",
+  "name": "brb_objects",
   "tags": [],
   "resourceType": "GMScript",
 }
